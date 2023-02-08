@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@layer components {
+    .nav-item {
+        @apply text-2xl font-bold
+    }
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(289.6deg, #0C0C0C 0%, #2C4550 98.22%);
+    color: #FFFFFF;
+}
+
+.custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    height: 100%;
+}
+
+.bottom-bg {
+    background: radial-gradient(100% 2631.09% at 0% 0%, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.558) 100%);
+    backdrop-filter: blur(25px);
+}
+
+.bg-image {
+    background-image: url('../../public/static/background2.png'), url('../../public/static/background1.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 65% 30%, right;
+    background-attachment: fixed;
+}
+
+.bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 2px 0;
+    transition: all .3s ease;
+    background-color: #FFFFFF;
+}
+
+@media(max-width: 1024px) {
+    .nav-container {
+        display: none;
+    }
+
+    .hamburger-container {
+        display: flex;
+    }
+}
+
+@media(min-width: 1025px) {
+    .nav-container {
+        display: flex;
+    }
+
+    .hamburger-container {
+        display: none;
+    }
+}
+
